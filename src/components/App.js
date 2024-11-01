@@ -156,7 +156,6 @@ class App extends React.Component {
                             component={Menu}
                             isLoggedIn={auth.isLoggedIn}
                         />
-
                         <Route component={Page404} />
                     </Switch>
                 </div>

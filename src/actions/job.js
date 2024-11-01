@@ -9,6 +9,7 @@ import {
     ADD_INVENTORY_HISTORY,
     UPDATE_INVENTORY_HISTORY,
     DELETE_INVENTORY_ITEM,
+    FETCH_REDUCTION,
 } from './actionTypes'
 
 export function createJob(
@@ -204,6 +205,23 @@ export function fetchJobs() {
             })
     }
 }
+
+export function fetchReductionEstimate() {
+    return (dispatch) => {
+        const url = APIURLS.fetchReductionEstimate()
+
+        fetch(url)
+            .then((response) => {
+                console.log('Response', response)
+                return response.json
+            })
+            .then((data) => {
+                console.log('HERE2', data)
+                dispatch(updateReductionEstimate(data.reductions))
+            })
+        }
+}
+
 export function fetchMenus() {
     return (dispatch) => {
         const url = APIURLS.fetchMenus()
@@ -239,6 +257,13 @@ export function updateJobs(jobs) {
     return {
         type: UPDATE_JOB,
         jobs,
+    }
+}
+
+export function updateReductionEstimate(reductions) {
+    return {
+        type: FETCH_REDUCTION,
+        reductions,
     }
 }
 

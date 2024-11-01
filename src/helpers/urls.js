@@ -17,4 +17,6 @@ export const APIURLS = {
     fetchInventoryHistory: () => `${API_ROOT}/users/fetchinventoryHistory`,
     deleteMenu: () => `${API_ROOT}/users/deleteMenu`,
     deleteInventoryItem: () => `${API_ROOT}/users/deleteInventoryItem`,
+
+    fetchReductionEstimate: () => `${API_ROOT}/users/fetchReductionEstimate`,
 }
