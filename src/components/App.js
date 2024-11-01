@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 // import Home from './Home';
 
 import jwtDecode from 'jwt-decode'
-
+import ResourceList from './ResourceList';
 import {
     BrowserRouter as Router,
     Link,
@@ -111,6 +111,11 @@ class App extends React.Component {
                         />
                         <Route path="/login" component={Login} />
                         <Route path="/signup" component={Signup} />
+                        <PrivateRoute
+                            path="/resources"
+                            component={ResourceList}
+                            isLoggedIn={auth.isLoggedIn}
+                        />
                         <PrivateRoute
                             path="/settings"
                             component={Settings}
