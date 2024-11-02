@@ -7,8 +7,10 @@ import { clearsearchstate } from '../actions/search'
 
 import 'react-datepicker/dist/react-datepicker.css'
 
-import { createJob, createInventoryHistory } from '../actions/job'
+import { createJob, createInventoryHistory, fetchReductionEstimate } from '../actions/job'
 import { fetchJobs } from '../actions/job'
+
+import { APIURLS } from '../helpers/urls'
 
 class Goal extends Component {
     constructor(props) {
@@ -24,6 +26,7 @@ class Goal extends Component {
             dateexpired: '',
             editMode: false,
             metric: 'Items',
+            reductionData: '',
         }
     }
 
@@ -41,6 +44,10 @@ class Goal extends Component {
         alert('updated the quantity of ' + itemname)
         document.getElementById('itnameupdate').value = ''
         document.getElementById('quanupdate').value = ''
+    }
+
+    getReduction = () => {
+        this.props.dispatch(fetchReductionEstimate())
     }
 
     clearSearch = () => {
@@ -98,8 +105,37 @@ class Goal extends Component {
         document.getElementById('bdate').value = ''
     }
 
-    componentDidMount() {
+
+
+    async componentDidMount() {
         this.props.dispatch(fetchJobs())
+        // this.props.dispatch(fetchReductionEstimate())
+        // const data = fetchReductionEstimate();
+        // this.setState(() => ({
+        //     reductionData: data
+        // }))
+        // console.log(data)
+        // console.log("HERE123")
+
+        try {
+            const response = await fetch(APIURLS.fetchReductionEstimate()) // replace with actual endpoint
+            const data = await response.json()
+            console.log(data.reduction[0].amount)
+            console.log("Howdy")
+            // this.setState({ apiData: data })
+            this.setState(() => ({
+                itemAmount : data.reduction[0].amount,
+                itemTotal : data.reduction[0].total,
+                tonsAmount : data.reduction[1].amount,
+                tonsTotal : data.reduction[1].total,
+                gallonsAmount : data.reduction[2].amount,
+                gallonsTotal : data.reduction[2].total,
+                kilogramsAmount : data.reduction[3].amount,
+                kilogramsTotal : data.reduction[3].total,
+            }))
+        } catch (error) {
+            console.error("Error fetching data:", error)
+        }
     }
 
     render() {
@@ -293,6 +329,35 @@ class Goal extends Component {
                             onClick={this.handleSave1}
                         >
                             Save
+                        </button>
+                    </div>
+                </div>
+                <div
+                    className="goal-form"
+                    style={{
+                        width: '600px',
+                        height: '550px',
+                        marginLeft: '100px',
+                    }}
+                >
+                    <span className="login-signup-header">Estimated Waste Reduction</span>
+                    <div className="field">
+                        <p>According to the USDA, between 30 and 40 percent of food supply in the US is wasted. View the reports below to see what percent of each metric is wasted at your restaurant.</p>
+                        <p>Items:</p>
+                        <p>{JSON.stringify((this.state.itemTotal != 0) ? 100 * this.state.itemAmount / this.state.itemTotal : 0)}% loss</p>
+                        <p>Items:</p>
+                        <p>{JSON.stringify((this.state.tonsTotal != 0) ? 100 * this.state.tonsAmount / this.state.tonsTotal : 0)}% loss</p>
+                        <p>Items:</p>
+                        <p>{JSON.stringify((this.state.gallonsTotal != 0) ? 100 * this.state.gallonsAmount / this.state.gallonsTotal : 0)}% loss</p>
+                        <p>Items:</p>
+                        <p>{JSON.stringify((this.state.kilogramsTotal != 0) ? 100 * this.state.kilogramsAmount / this.state.kilogramsTotal : 0)}% loss</p>
+                    </div>
+                    <div className="field">
+                        <button
+                            className="button save-btn"
+                            onClick={this.handleSave1}
+                        >
+                            Reset Estimate
                         </button>
                     </div>
                 </div>
