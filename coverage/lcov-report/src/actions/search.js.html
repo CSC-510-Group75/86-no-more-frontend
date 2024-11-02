@@ -108,9 +108,7 @@
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,58 +160,57 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FETCH_SEARCH_RESULTS_SUCCESS ,CLEAR_SEARCH_STATE} from './actionTypes';
-import { APIURLS } from '../helpers/urls';
-&nbsp;
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FETCH_SEARCH_RESULTS_SUCCESS, CLEAR_SEARCH_STATE } from './actionTypes'
+import { APIURLS } from '../helpers/urls'
 &nbsp;
 // This function searches for Food data and its calories
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >searchUsers(</span>searchText) {
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {</span>
-    const url = <span class="cstat-no" title="statement not covered" >APIURLS.userSearch(searchText);</span>
-<span class="cstat-no" title="statement not covered" >    console.log(searchText);</span>
-<span class="cstat-no" title="statement not covered" >    console.log(typeof searchText);</span>
+<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {</span>
+        const url = <span class="cstat-no" title="statement not covered" >APIURLS.userSearch(searchText)</span>
+<span class="cstat-no" title="statement not covered" >        console.log(searchText)</span>
+<span class="cstat-no" title="statement not covered" >        console.log(typeof searchText)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (searchText.length == 0) {</span>
-<span class="cstat-no" title="statement not covered" >      dispatch(searchResultsSuccess2([]));</span>
-    } else {
-<span class="cstat-no" title="statement not covered" >      fetch(url, {</span>
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          //'Authorization': `Bearer ${getAuthTokenFromLocalStorage()}`
-        },
-      })
-        .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
-        .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
-<span class="cstat-no" title="statement not covered" >          console.log('SEARCH Data', data);</span>
+<span class="cstat-no" title="statement not covered" >        if (searchText.length == 0) {</span>
+<span class="cstat-no" title="statement not covered" >            dispatch(searchResultsSuccess2([]))</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            fetch(url, {</span>
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    //'Authorization': `Bearer ${getAuthTokenFromLocalStorage()}`
+                },
+            })
+                .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
+                .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
+<span class="cstat-no" title="statement not covered" >                    console.log('SEARCH Data', data)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          if (data.success) {</span>
-<span class="cstat-no" title="statement not covered" >            dispatch(searchResultsSuccess(data.data.users));</span>
-          }
-        });
+<span class="cstat-no" title="statement not covered" >                    if (data.success) {</span>
+<span class="cstat-no" title="statement not covered" >                        dispatch(searchResultsSuccess(data.data.users))</span>
+                    }
+                })
+        }
     }
-  };
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >searchResultsSuccess(</span>users) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: FETCH_SEARCH_RESULTS_SUCCESS,
-    users,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: FETCH_SEARCH_RESULTS_SUCCESS,
+        users,
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >searchResultsSuccess2(</span>users) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: FETCH_SEARCH_RESULTS_SUCCESS,
-    users,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: FETCH_SEARCH_RESULTS_SUCCESS,
+        users,
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >clearsearchstate(</span>results) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: CLEAR_SEARCH_STATE,
-    results,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: CLEAR_SEARCH_STATE,
+        results,
+    }
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -222,7 +219,7 @@ export function <span class="fstat-no" title="function not covered" >clearsearch
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Dec 04 2021 20:56:26 GMT-0500 (Eastern Standard Time)
+                at Fri Nov 01 2024 20:56:15 GMT-0400 (Eastern Daylight Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

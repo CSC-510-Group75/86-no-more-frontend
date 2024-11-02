@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -120,29 +120,16 @@
 <a name='L62'></a><a href='#L62'>62</a>
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L65'></a><a href='#L65'>65</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -187,7 +174,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -195,26 +184,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
 &nbsp;
-&nbsp;
-&nbsp;
-import { connect } from 'react-redux';
-&nbsp;
-&nbsp;
+import { connect } from 'react-redux'
 &nbsp;
 class Home extends Component {
-    
-    render() {
-        const { job,search } = this.props;
-        console.log('SEAARCH',search)
-        
-        console.log('lalallaala')
-        console.log('jobbbbbs',job)
-        return (
-     
-      &lt;div className="home-container"&gt;
+<span class="fstat-no" title="function not covered" >    re</span>nder() {
+        const { job, search } = <span class="cstat-no" title="statement not covered" >this.props</span>
+<span class="cstat-no" title="statement not covered" >        console.log('SEAARCH', search)</span>
+<span class="cstat-no" title="statement not covered" >        console.log('jobbbbbs', job)</span>
+<span class="cstat-no" title="statement not covered" >        return (</span>
+            &lt;div className="home-container"&gt;
                 &lt;div className="container"&gt;
                     &lt;div className="graf-bg-container"&gt;
                         &lt;div className="graf-layout"&gt;
@@ -231,49 +211,51 @@ class Home extends Component {
                             &lt;div className="graf-circle"&gt;&lt;/div&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
-                    &lt;br/&gt;
-                    &lt;b className="home-subtitle"&gt;America loses up to 218 BILLION
-                        dollars from wasted food&lt;/b&gt;
-                    &lt;br/&gt;
-                    &lt;b className="home-subtitle"&gt;Restaurants in the United
-                        States are wasting 22 to 33 BILLION pounds of food a
-                        year&lt;/b&gt;
+                    &lt;br /&gt;
+                    &lt;b className="home-subtitle"&gt;
+                        America loses up to 218 BILLION dollars from wasted food
+                    &lt;/b&gt;
+                    &lt;br /&gt;
+                    &lt;b className="home-subtitle"&gt;
+                        Restaurants in the United States are wasting 22 to 33
+                        BILLION pounds of food a year
+                    &lt;/b&gt;
                     &lt;b className="home-ref"&gt;[1]&lt;/b&gt;
-                    &lt;br/&gt;
+                    &lt;br /&gt;
                     &lt;h2 className="home-subtitle"&gt;Let's change that!&lt;/h2&gt;
-                    &lt;h1 className="home-title"&gt;86 No More: A Kitchen Intelligence System&lt;/h1&gt;
-                    &lt;b className="home-ref"&gt;[1] Gunders, Dana. “Wasted: How America
-                        is Losing Up to 40 Percent of Its Food from Farm to Fork
-                        to Landfill.” Natural Resources Defense Council, 2017.
-                        Retrieved September 27, 2021, from https://www.nrdc.org
-                        /sites/default/files/wasted-2017-report.pdf&lt;/b&gt;
+                    &lt;h1 className="home-title"&gt;
+                        86 No More: A Kitchen Intelligence System
+                    &lt;/h1&gt;
+                    &lt;b className="home-ref"&gt;
+                        [1] Gunders, Dana. “Wasted: How America is Losing Up to
+                        40 Percent of Its Food from Farm to Fork to Landfill.”
+                        Natural Resources Defense Council, 2017. Retrieved
+                        September 27, 2021, from https://www.nrdc.org
+                        /sites/default/files/wasted-2017-report.pdf
+                    &lt;/b&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-&nbsp;
-            
-        );
-        
+        )
     }
 }
 &nbsp;
-function mapStateToProps(state) {
-    return {
-      auth: state.auth,
-      jobs:state.jobs,
-      search:state.search
+function <span class="fstat-no" title="function not covered" >mapStateToProps(</span>state) {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        auth: state.auth,
+        jobs: state.jobs,
+        search: state.search,
+    }
+}
 &nbsp;
-      
-    };
-  }
-  
-export default connect(mapStateToProps)(Home);</pre></td></tr></table></pre>
+export default connect(mapStateToProps)(Home)
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Dec 04 2021 20:56:26 GMT-0500 (Eastern Standard Time)
+                at Fri Nov 01 2024 20:56:15 GMT-0400 (Eastern Daylight Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

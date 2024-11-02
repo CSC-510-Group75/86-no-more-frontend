@@ -278,24 +278,7 @@
 <a name='L220'></a><a href='#L220'>220</a>
 <a name='L221'></a><a href='#L221'>221</a>
 <a name='L222'></a><a href='#L222'>222</a>
-<a name='L223'></a><a href='#L223'>223</a>
-<a name='L224'></a><a href='#L224'>224</a>
-<a name='L225'></a><a href='#L225'>225</a>
-<a name='L226'></a><a href='#L226'>226</a>
-<a name='L227'></a><a href='#L227'>227</a>
-<a name='L228'></a><a href='#L228'>228</a>
-<a name='L229'></a><a href='#L229'>229</a>
-<a name='L230'></a><a href='#L230'>230</a>
-<a name='L231'></a><a href='#L231'>231</a>
-<a name='L232'></a><a href='#L232'>232</a>
-<a name='L233'></a><a href='#L233'>233</a>
-<a name='L234'></a><a href='#L234'>234</a>
-<a name='L235'></a><a href='#L235'>235</a>
-<a name='L236'></a><a href='#L236'>236</a>
-<a name='L237'></a><a href='#L237'>237</a>
-<a name='L238'></a><a href='#L238'>238</a>
-<a name='L239'></a><a href='#L239'>239</a>
-<a name='L240'></a><a href='#L240'>240</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L223'></a><a href='#L223'>223</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -445,18 +428,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -482,13 +457,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -527,252 +495,233 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { APIURLS } from "../helpers/urls";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { APIURLS } from '../helpers/urls'
 import {
-  LOGIN_START,
-  LOGIN_FAILED,
-  LOGIN_SUCCESS,
-  AUTHENTICATE_USER,
-  LOG_OUT,
-  SIGNUP_START,
-  SIGNUP_FAILED,
-  SIGNUP_SUCCESS,
-  CLEAR_AUTH_STATE,
-  EDIT_USER_SUCCESSFULL,
-  EDIT_USER_FAILED,
-  EDIT_ITEM_SUCCESSFULL
-} from "./actionTypes";
-import { getFormBody } from "../helpers/utils";
-import { getAuthTokenFromLocalStorage } from "../helpers/utils";
+    LOGIN_START,
+    LOGIN_FAILED,
+    LOGIN_SUCCESS,
+    AUTHENTICATE_USER,
+    LOG_OUT,
+    SIGNUP_START,
+    SIGNUP_FAILED,
+    SIGNUP_SUCCESS,
+    CLEAR_AUTH_STATE,
+    EDIT_USER_SUCCESSFULL,
+    EDIT_USER_FAILED,
+    EDIT_ITEM_SUCCESSFULL,
+} from './actionTypes'
+import { getFormBody } from '../helpers/utils'
+import { getAuthTokenFromLocalStorage } from '../helpers/utils'
 // import { fetchUserFriends } from '../actions/friends';
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >startLogin(</span>) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: LOGIN_START,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: LOGIN_START,
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >loginFailed(</span>errorMessage) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: LOGIN_FAILED,
-    error: errorMessage,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: LOGIN_FAILED,
+        error: errorMessage,
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >loginSuccess(</span>user) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: LOGIN_SUCCESS,
-    user,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: LOGIN_SUCCESS,
+        user,
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >login(</span>email, password) {
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    dispatch(startLogin());</span>
-    const url = <span class="cstat-no" title="statement not covered" >APIURLS.login();</span>
+<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(startLogin())</span>
+        const url = <span class="cstat-no" title="statement not covered" >APIURLS.login()</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    fetch(url, {</span>
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: getFormBody({ email, password }),
-    })
-      .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
-      .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
-<span class="cstat-no" title="statement not covered" >        console.log("data", data);</span>
+<span class="cstat-no" title="statement not covered" >        fetch(url, {</span>
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: getFormBody({ email, password }),
+        })
+            .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
+            .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
+<span class="cstat-no" title="statement not covered" >                console.log('data', data)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (data.success) {</span>
-          //dispatch action to save user
-<span class="cstat-no" title="statement not covered" >          localStorage.setItem("token", data.data.token);</span>
-<span class="cstat-no" title="statement not covered" >          dispatch(loginSuccess(data.data.user));</span>
-          //   dispatch(fetchUserFriends(data.data.user._id));
-<span class="cstat-no" title="statement not covered" >          return;</span>
-        }
-<span class="cstat-no" title="statement not covered" >        dispatch(loginFailed(data.message));</span>
-      });
-  };
+<span class="cstat-no" title="statement not covered" >                if (data.success) {</span>
+                    //dispatch action to save user
+<span class="cstat-no" title="statement not covered" >                    localStorage.setItem('token', data.data.token)</span>
+<span class="cstat-no" title="statement not covered" >                    dispatch(loginSuccess(data.data.user))</span>
+                    //   dispatch(fetchUserFriends(data.data.user._id));
+<span class="cstat-no" title="statement not covered" >                    return</span>
+                }
+<span class="cstat-no" title="statement not covered" >                dispatch(loginFailed(data.message))</span>
+            })
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >signup(</span>email, password, confirmPassword, name, restname) {
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {</span>
-    const url = <span class="cstat-no" title="statement not covered" >APIURLS.signup();</span>
-<span class="cstat-no" title="statement not covered" >    fetch(url, {</span>
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: getFormBody({
-        email,
-        password,
-        confirm_password: confirmPassword,
-        name,
-        restname,
-      }),
-    })
-      .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
-      .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
-        // console.log('data', data);
-<span class="cstat-no" title="statement not covered" >        if (data.success) {</span>
-          // do something
-<span class="cstat-no" title="statement not covered" >          localStorage.setItem("token", data.data.token);</span>
-<span class="cstat-no" title="statement not covered" >          dispatch(signupSuccessful(data.data.user));</span>
-<span class="cstat-no" title="statement not covered" >          return;</span>
-        }
-<span class="cstat-no" title="statement not covered" >        dispatch(signupFailed(data.message));</span>
-      });
-  };
+<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {</span>
+        const url = <span class="cstat-no" title="statement not covered" >APIURLS.signup()</span>
+<span class="cstat-no" title="statement not covered" >        fetch(url, {</span>
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: getFormBody({
+                email,
+                password,
+                confirm_password: confirmPassword,
+                name,
+                restname,
+            }),
+        })
+            .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
+            .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
+                // console.log('data', data);
+<span class="cstat-no" title="statement not covered" >                if (data.success) {</span>
+                    // do something
+<span class="cstat-no" title="statement not covered" >                    localStorage.setItem('token', data.data.token)</span>
+<span class="cstat-no" title="statement not covered" >                    dispatch(signupSuccessful(data.data.user))</span>
+<span class="cstat-no" title="statement not covered" >                    return</span>
+                }
+<span class="cstat-no" title="statement not covered" >                dispatch(signupFailed(data.message))</span>
+            })
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >startSingup(</span>) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: SIGNUP_START,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: SIGNUP_START,
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >signupFailed(</span>error) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: SIGNUP_FAILED,
-    error,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: SIGNUP_FAILED,
+        error,
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >signupSuccessful(</span>user) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: SIGNUP_SUCCESS,
-    user,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: SIGNUP_SUCCESS,
+        user,
+    }
 }
 export function <span class="fstat-no" title="function not covered" >authenticateUser(</span>user) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: AUTHENTICATE_USER,
-    user,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: AUTHENTICATE_USER,
+        user,
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >logoutUser(</span>) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: LOG_OUT,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: LOG_OUT,
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >clearAuthState(</span>) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: CLEAR_AUTH_STATE,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: CLEAR_AUTH_STATE,
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >editUserSucessfull(</span>user) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: EDIT_USER_SUCCESSFULL,
-    user,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: EDIT_USER_SUCCESSFULL,
+        user,
+    }
 }
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >editUserFailed(</span>error) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: EDIT_USER_FAILED,
-    error,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: EDIT_USER_FAILED,
+        error,
+    }
 }
 &nbsp;
+export function <span class="fstat-no" title="function not covered" >editUser(</span>name, password, confirmPassword, userId) {
+<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {</span>
+        const url = <span class="cstat-no" title="statement not covered" >APIURLS.editProfile()</span>
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >editUser(</span>
-  name,
-  password,
-  confirmPassword,
-  userId,
-  
-) {
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {</span>
-    const url = <span class="cstat-no" title="statement not covered" >APIURLS.editProfile();</span>
+<span class="cstat-no" title="statement not covered" >        fetch(url, {</span>
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                //'Authorization': `Bearer ${getAuthTokenFromLocalStorage()}`
+            },
+            body: getFormBody({
+                name,
+                password,
+                confirm_password: confirmPassword,
+                id: userId,
+            }),
+        })
+            .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
+            .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
+<span class="cstat-no" title="statement not covered" >                console.log('EDIT PROFILE data', data)</span>
+<span class="cstat-no" title="statement not covered" >                if (data.success) {</span>
+<span class="cstat-no" title="statement not covered" >                    dispatch(editUserSucessfull(data.data.user))</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    fetch(url, {</span>
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        //'Authorization': `Bearer ${getAuthTokenFromLocalStorage()}`
-      },
-      body: getFormBody({
-        name,
-        password,
-        confirm_password: confirmPassword,
-        id: userId,
-        
-      }),
-    })
-      .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
-      .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
-<span class="cstat-no" title="statement not covered" >        console.log("EDIT PROFILE data", data);</span>
-<span class="cstat-no" title="statement not covered" >        if (data.success) {</span>
-<span class="cstat-no" title="statement not covered" >          dispatch(editUserSucessfull(data.data.user));</span>
+<span class="cstat-no" title="statement not covered" >                    if (data.data.token) {</span>
+<span class="cstat-no" title="statement not covered" >                        localStorage.setItem('token', data.data.token)</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return</span>
+                }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          if (data.data.token) {</span>
-<span class="cstat-no" title="statement not covered" >            localStorage.setItem("token", data.data.token);</span>
-          }
-<span class="cstat-no" title="statement not covered" >          return;</span>
-        }
-&nbsp;
-<span class="cstat-no" title="statement not covered" >        dispatch(editUserFailed(data.message));</span>
-      });
-  };
+<span class="cstat-no" title="statement not covered" >                dispatch(editUserFailed(data.message))</span>
+            })
+    }
 }
 &nbsp;
+export function <span class="fstat-no" title="function not covered" >editItem(</span>itemname, quantity, metric) {
+<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {</span>
+        const url = <span class="cstat-no" title="statement not covered" >APIURLS.editItem()</span>
 &nbsp;
+<span class="cstat-no" title="statement not covered" >        fetch(url, {</span>
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                //'Authorization': `Bearer ${getAuthTokenFromLocalStorage()}`
+            },
+            body: getFormBody({
+                itemname,
+                quantity,
+                metric,
+            }),
+        })
+            .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
+            .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
+<span class="cstat-no" title="statement not covered" >                console.log('EDIT PROFILE data', data)</span>
+<span class="cstat-no" title="statement not covered" >                if (data.success) {</span>
+<span class="cstat-no" title="statement not covered" >                    dispatch(editItemSucessfull(data.data.inventories))</span>
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >editItem(</span>
-  itemname,
-  quantity,
-  
-  
-) {
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; {</span>
-    const url = <span class="cstat-no" title="statement not covered" >APIURLS.editItem();</span>
+<span class="cstat-no" title="statement not covered" >                    if (data.data.token) {</span>
+<span class="cstat-no" title="statement not covered" >                        localStorage.setItem('token', data.data.token)</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return</span>
+                }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    fetch(url, {</span>
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        //'Authorization': `Bearer ${getAuthTokenFromLocalStorage()}`
-      },
-      body: getFormBody({
-        itemname,
-        quantity
-        
-      }),
-    })
-      .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
-      .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
-<span class="cstat-no" title="statement not covered" >        console.log("EDIT PROFILE data", data);</span>
-<span class="cstat-no" title="statement not covered" >        if (data.success) {</span>
-<span class="cstat-no" title="statement not covered" >          dispatch(editItemSucessfull(data.data.inventories));</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >          if (data.data.token) {</span>
-<span class="cstat-no" title="statement not covered" >            localStorage.setItem("token", data.data.token);</span>
-          }
-<span class="cstat-no" title="statement not covered" >          return;</span>
-        }
-&nbsp;
-        // dispatch(editItemFailed(data.message));
-      });
-  };
+                // dispatch(editItemFailed(data.message));
+            })
+    }
 }
-&nbsp;
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >editItemSucessfull(</span>inventories) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    type: EDIT_ITEM_SUCCESSFULL,
-    inventories,
-  };
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: EDIT_ITEM_SUCCESSFULL,
+        inventories,
+    }
 }
-&nbsp;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -780,7 +729,7 @@ export function <span class="fstat-no" title="function not covered" >editItemSuc
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Dec 04 2021 20:56:26 GMT-0500 (Eastern Standard Time)
+                at Fri Nov 01 2024 20:56:15 GMT-0400 (Eastern Daylight Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

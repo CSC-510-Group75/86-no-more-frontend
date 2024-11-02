@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/10</span>
+                <span class='fraction'>0/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/8</span>
+                <span class='fraction'>0/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/10</span>
+                <span class='fraction'>0/10</span>
             </div>
         
             
@@ -92,13 +92,19 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -123,47 +129,47 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
-import { UPDATE_JOB,ADD_JOB,CLOSE_JOB,EDIT_ITEM_SUCCESSFULL} from '../actions/actionTypes';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
+    UPDATE_JOB,
+    ADD_JOB,
+    CLOSE_JOB,
+    EDIT_ITEM_SUCCESSFULL,
+} from '../actions/actionTypes'
 &nbsp;
-export default function jobs(state = [], action) {
-  // { posts : [] }
+export default function <span class="fstat-no" title="function not covered" >jobs(</span>state = <span class="branch-0 cbranch-no" title="branch not covered" >[],</span> action) {
+    // { posts : [] }
 &nbsp;
-  switch (action.type) {
-<span class="branch-0 cbranch-no" title="branch not covered" >    case UPDATE_JOB:</span>
-<span class="cstat-no" title="statement not covered" >      return action.jobs;</span>
+<span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
+        case UPDATE_JOB:
+<span class="cstat-no" title="statement not covered" >            return action.jobs</span>
 &nbsp;
-<span class="branch-1 cbranch-no" title="branch not covered" >    case EDIT_ITEM_SUCCESSFULL:</span>
-<span class="cstat-no" title="statement not covered" >      return action.inventories</span>
+        case EDIT_ITEM_SUCCESSFULL:
+<span class="cstat-no" title="statement not covered" >            return action.inventories</span>
 &nbsp;
-<span class="branch-2 cbranch-no" title="branch not covered" >    case ADD_JOB:</span>
-<span class="cstat-no" title="statement not covered" >      return [action.job, ...state];</span>
+        case ADD_JOB:
+<span class="cstat-no" title="statement not covered" >            return [action.job, ...state]</span>
 &nbsp;
-<span class="branch-3 cbranch-no" title="branch not covered" >      case CLOSE_JOB:</span>
-        const updatedJob = <span class="cstat-no" title="statement not covered" >state.map(<span class="fstat-no" title="function not covered" >(j</span>ob) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >            if (job._id === action.jobId){</span>
-<span class="cstat-no" title="statement not covered" >                return {</span>
-                    ...job,
-                    status: action.status
-                };
-            }
+        case CLOSE_JOB:
+            const updatedJob = <span class="cstat-no" title="statement not covered" >state.map(<span class="fstat-no" title="function not covered" >(j</span>ob) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                if (job._id === action.jobId) {</span>
+<span class="cstat-no" title="statement not covered" >                    return {</span>
+                        ...job,
+                        status: action.status,
+                    }
+                }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return job</span>
-        });
+<span class="cstat-no" title="statement not covered" >                return job</span>
+            })
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        return updatedJob;</span>
+<span class="cstat-no" title="statement not covered" >            return updatedJob</span>
 &nbsp;
-    default:
-      return state;
-  }
+        default:
+<span class="cstat-no" title="statement not covered" >            return state</span>
+    }
 }
-&nbsp;
-&nbsp;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -171,7 +177,7 @@ export default function jobs(state = [], action) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Dec 04 2021 20:56:26 GMT-0500 (Eastern Standard Time)
+                at Fri Nov 01 2024 20:56:15 GMT-0400 (Eastern Daylight Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>
