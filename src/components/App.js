@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 // import Home from './Home';
 
 import jwtDecode from 'jwt-decode'
-
+import ResourceList from './ResourceList';
 import {
     BrowserRouter as Router,
     Link,
