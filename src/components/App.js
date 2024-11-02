@@ -156,6 +156,11 @@ class App extends React.Component {
                             component={Menu}
                             isLoggedIn={auth.isLoggedIn}
                         />
+                        <PrivateRoute
+                            path="/resources"
+                            component={ResourceList}
+                            isLoggedIn={auth.isLoggedIn}
+                        />
                         <Route component={Page404} />
                     </Switch>
                 </div>
