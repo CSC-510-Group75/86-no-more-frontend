@@ -7,6 +7,7 @@
   src="/public/images/banner.gif" alt="Elevate Your Culinary Experience: 86-No-More – Where Innovation Meets Indulgence!"></a>
 </p>
 <hr>
+<img src="coverage/badge-statements.svg"> <img src="coverage/badge-lines.svg"> <img src="coverage/badge-functions.svg">
 
 [![DOI Frontend](https://zenodo.org/badge/DOI/10.5281/zenodo.10023397.svg)](https://zenodo.org/doi/10.5281/zenodo.10023397)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
@@ -28,6 +29,7 @@
 ![Build Status](https://github.com/nitin-dhevar/86-no-more-frontend/workflows/npm-build/badge.svg)
 [![codecov](https://raw.githubusercontent.com/nitin-dhevar/86-no-more-frontend/711b55a047c10fab6bdf3da57b436a0163f475d6/coverage/badge-lines.svg)](https://github.com/nitin-dhevar/86-no-more-frontend/blob/main/coverage/)
 [![unit_tests](https://github.com/nitin-dhevar/86-no-more-frontend/actions/workflows/QtyCalcTests.yml/badge.svg)](https://github.com/nitin-dhevar/86-no-more-frontend/actions/workflows/QtyCalcTests.yml)
+
 
 <!--[Logo](https://user-images.githubusercontent.com/89487138/144724853-bd0d6f22-1a44-4dc3-afc4-6270b2bd3f36.jpg)
  
